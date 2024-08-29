@@ -1,8 +1,9 @@
 @extends('layout.frontend.master')
+@section('content')
 <main>
     <div class="hero">
         <section class="home-slider owl-carousel">
-            <div class="slider-item" style="background-image:url(images/bg_1.jpg);">
+            <div class="slider-item" style="background-image:url('{{asset('assets/images/bg_1.jpg')}}');">
                 <div class="overlay"></div>
                 <div class="container">
                     <div class="row no-gutters slider-text align-items-center justify-content-end">
@@ -16,7 +17,7 @@
                 </div>
             </div>
 
-            <div class="slider-item" style="background-image:url(images/bg_2.jpg);">
+            <div class="slider-item" style="background-image:url('{{ asset('assets/images/bg_2.jpg') }}');">
                 <div class="overlay"></div>
                 <div class="container">
                     <div class="row no-gutters slider-text align-items-center justify-content-end">
@@ -31,7 +32,6 @@
             </div>
         </section>
     </div>
-
     <section class="ftco-booking ftco-section ftco-no-pt ftco-no-pb">
         <div class="container">
             <div class="row no-gutters">
@@ -188,9 +188,11 @@
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-md-7 order-md-last d-flex">
-                    <div class="img img-1 mr-md-2 ftco-animate" style="background-image: url(images/about-1.jpg);">
+                    <div class="img img-1 mr-md-2 ftco-animate"
+                        style="background-image: url('{{ asset('assets/images//about-1.jpg') }}');">
                     </div>
-                    <div class="img img-2 ml-md-2 ftco-animate" style="background-image: url(images/about-2.jpg);">
+                    <div class="img img-2 ml-md-2 ftco-animate"
+                        style="background-image: url('{{ asset('assets/images//about-2.jpg') }}');">
                     </div>
                 </div>
                 <div class="col-md-5 wrap-about pb-md-3 ftco-animate pr-md-5 pb-md-5 pt-md-4">
@@ -634,11 +636,6 @@
     </section>
 
     <!-- loader -->
-    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
-            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-                stroke="#F96D00" />
-        </svg></div>
 
-    </body>
 </main>
+@endsection
